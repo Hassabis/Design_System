@@ -6,6 +6,7 @@ class User(AbstractUser):
     mobile = models.CharField(max_length=11,unique=False,verbose_name="手机号")
     birthday = models.CharField(verbose_name="生日",max_length=16)
     profession = models.CharField(max_length=9,verbose_name="职业")
+    gender = models.BooleanField(verbose_name="性别",default=False)
 
 
     class Meta:

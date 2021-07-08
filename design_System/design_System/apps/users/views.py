@@ -25,9 +25,8 @@ class UserRegister(View):
 
         if not re.match(r'^[0-9A-Za-z]{8,12}$', password):
             return http.HttpResponseForbidden('请输入8-12位的密码')
-
         try:
-            user = User.objects.create_user(username=username, password=password, email=email)
+            User.objects.create_user(username=username, password=password, email=email)
         except DatabaseError:
             return http.JsonResponse({
                 "err":"注册失败"
@@ -35,3 +34,10 @@ class UserRegister(View):
         return http.JsonResponse({
             "msg":"success"
         })
+
+    def get(self,requests):
+        username = requests.GET.get("username")
+        print(username)
+        count = User.objects.filter(username=username).count()
+        return http.JsonResponse({"code": 0, "errmsg": '该用户已经存在', 'count': count})
+

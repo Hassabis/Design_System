@@ -6,5 +6,6 @@ def jwt_response_payload_hendler(token, user=None, request=None):
         'username': user.username,
         'id': user.id,
         'birthday': user.birthday,
-        'profession': user.profession
+        'profession': user.profession,
+        'gender':user.gender
     }
