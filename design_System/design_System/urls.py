@@ -19,6 +19,10 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # 用户中心
     url(r'^',include(('users.urls','users'),namespace="user")),
-    url(r'^',include(('imageview.urls','imageview'),namespace="imageview"))
+    # 资源图片管理
+    url(r'^',include(('imageview.urls','imageview'),namespace="imageview")),
+    # 汽车管理
+    url(r'^',include(('car.urls','car'),namespace="car"))
 ]

@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'users',
-    'imageview'
+    'imageview',
+    'car'
 ]
 
 MIDDLEWARE = [
@@ -168,7 +169,8 @@ AUTH_USER_MODEL = 'users.User'
 CORS_ORIGIN_WHITELIST = (
     'http://127.0.0.1:8080',
     'http://localhost:8080',
-    'http://192.168.149.1:8080'
+    'http://192.168.149.1:8080',
+    'http://192.168.31.132:8080'
 )
 CORS_ALLOW_CREDENTIALS = True
 REST_FRAMEWORK = {
