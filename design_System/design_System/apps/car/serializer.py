@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 from rest_framework import serializers
 
-from car.models import CarModel, CarType, CarLittleType
+from car.models import CarModel, CarType, CarLittleType, CarDetailModel
 
 
 class CarModelSerializer(serializers.ModelSerializer):
@@ -23,4 +23,10 @@ class CarLittleTypeSerializer(serializers.ModelSerializer):
     class Meta:
         # 二级分类
         model = CarLittleType
+        fields = "__all__"
+
+
+class DetailCarModelSerialier(serializers.ModelSerializer):
+    class Meta:
+        model = CarDetailModel
         fields = "__all__"

@@ -9,5 +9,7 @@ urlpatterns = [
     # 车的二级分类
     url('Secondclasscar/(?P<pk>\d+)/',views.LittleCarType.as_view()),
     # 汽车详情
-    url('Thirdclasscar/(?P<pk>\d+)/',views.DetailCarMessage.as_view())
+    url('Thirdclasscar/(?P<pk>\d+)/',views.DetailCarMessage.as_view()),
+    # 某一个分类的所有汽车
+    url('detailCar/(?P<pk>\d+)/',views.DetailCarModelView.as_view())
 ]

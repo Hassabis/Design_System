@@ -2,8 +2,8 @@ from django.shortcuts import render
 
 # Create your views here.
 from rest_framework.views import APIView
-from car.models import CarType, CarLittleType, CarModel
-from car.serializer import CarTypeSerializer, CarLittleTypeSerializer, CarModelSerializer
+from car.models import CarType, CarLittleType, CarModel,CarDetailModel
+from car.serializer import CarTypeSerializer, CarLittleTypeSerializer, CarModelSerializer,DetailCarModelSerialier
 from rest_framework.response import Response
 
 
@@ -39,3 +39,12 @@ class DetailCarMessage(APIView):
         ser = CarModelSerializer(carmessage,many=True)
         return Response(ser.data)
 
+class DetailCarModelView(APIView):
+    def get(self,request,pk):
+        try:
+            # data = CarDetailModel.objects.filter(cartypesign=pk)
+            data = CarDetailModel.objects.filter(cartypesign=pk)
+        except:
+            return Response({"errmsg":"我们也很困惑为什么查不出来"})
+        ser = DetailCarModelSerialier(data,many=True)
+        return Response(ser.data)

@@ -36,6 +36,7 @@ class CarType(models.Model):
 class CarLittleType(models.Model):
     little = models.CharField(max_length=99,verbose_name="车型")
     sign = models.IntegerField(verbose_name="标识",default=None)
+    detailsign = models.IntegerField(default=None)
 
     class Meta:
         db_table = "tb_littertype"
@@ -44,3 +45,16 @@ class CarLittleType(models.Model):
     def __str__(self):
         return self.little
 
+class CarDetailModel(models.Model):
+    carmodel = models.CharField(max_length=255,default=None,verbose_name="汽车模型",null=True)
+    carprice = models.CharField(max_length=99,default=None,verbose_name="汽车价格",null=True)
+    carpower = models.CharField(max_length=255,default=None,verbose_name="汽车功率",null=True)
+    carspeeds = models.FloatField(default=None,verbose_name="百公里加速耗时",null=True)
+    cartime = models.FloatField(default=None,verbose_name="百公里",null=True)
+    cartypesign = models.FloatField(default=None,verbose_name="标识",null=True)
+    carheader = models.CharField(max_length=255,null=True,default=None)
+
+    class Meta:
+        db_table = "tb_detailcarmodel"
+        verbose_name = '汽车型号'
+        verbose_name_plural = verbose_name
