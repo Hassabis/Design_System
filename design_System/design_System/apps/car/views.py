@@ -2,8 +2,8 @@ from django.shortcuts import render
 
 # Create your views here.
 from rest_framework.views import APIView
-from car.models import CarType, CarLittleType, CarModel,CarDetailModel
-from car.serializer import CarTypeSerializer, CarLittleTypeSerializer, CarModelSerializer,DetailCarModelSerialier
+from car.models import CarType, CarLittleType, CarModel, CarDetailModel, CarDetailTechnicalData, TeMessage
+from car.serializer import CarTypeSerializer, CarLittleTypeSerializer, CarModelSerializer, DetailCarModelSerialier, CarDetailTechnicalDataSerializer,TeMessageSerializer
 from rest_framework.response import Response
 
 
@@ -48,3 +48,25 @@ class DetailCarModelView(APIView):
             return Response({"errmsg":"我们也很困惑为什么查不出来"})
         ser = DetailCarModelSerialier(data,many=True)
         return Response(ser.data)
+
+class TechinalCarData(APIView):
+    def get(self,request,pk):
+        """获取当前车俩的详情数据"""
+        try:
+            data = CarDetailTechnicalData.objects.get(technicalsign=pk)
+        except:
+            return Response({"error":"我们也很困惑为什么查不出来"})
+        ser = CarDetailTechnicalDataSerializer(data)
+        return Response(ser.data)
+
+
+class TeCarBaseData(APIView):
+    def get(self,request,pk):
+        try:
+            data = TeMessage.objects.get(tesign=pk)
+        except:
+            return Response({"error":"我们也很困惑为什么查不出来"})
+        ser = TeMessageSerializer(data)
+        return Response(ser.data)
+
+

@@ -6,5 +6,7 @@ from rest_framework_jwt.views import obtain_jwt_token
 from . import views
 urlpatterns = [
     url(r'^login/$',obtain_jwt_token),
-    path('register/',views.UserRegister.as_view())
+    path('register/',views.UserRegister.as_view()),
+    path('modify/',views.UserProcess.as_view()),
+    url('adderss/(?P<pk>\d+)/',views.GetAdderss.as_view())
 ]

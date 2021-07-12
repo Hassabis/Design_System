@@ -11,5 +11,9 @@ urlpatterns = [
     # 汽车详情
     url('Thirdclasscar/(?P<pk>\d+)/',views.DetailCarMessage.as_view()),
     # 某一个分类的所有汽车
-    url('detailCar/(?P<pk>\d+)/',views.DetailCarModelView.as_view())
+    url('detailCar/(?P<pk>\d+)/',views.DetailCarModelView.as_view()),
+    # 车辆详情数据
+    url('techincalCar/(?P<pk>\d+)/',views.TechinalCarData.as_view()),
+    # 页面基本数据
+    url('pagemessage/(?P<pk>\d+)/',views.TeCarBaseData.as_view())
 ]
