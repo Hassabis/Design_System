@@ -1,0 +1,10 @@
+INSERT INTO `tb_adderss`(`id`, `adderssid`, `adderss`, `adderssusername`, `if_default`, `phone`) VALUES (1, 28, '湖南省东安县鑫龙小镇', '蒋杰锋', 1, '18274912702');
+INSERT INTO `tb_adderss`(`id`, `adderssid`, `adderss`, `adderssusername`, `if_default`, `phone`) VALUES (2, 28, '湖南省东安县天成实验学院', '蒋杰锋', 0, '18274912702');
+INSERT INTO `tb_adderss`(`id`, `adderssid`, `adderss`, `adderssusername`, `if_default`, `phone`) VALUES (3, 19, '广东省广州市白云区', '樊莲果', 0, '18670488561');
+INSERT INTO `tb_adderss`(`id`, `adderssid`, `adderss`, `adderssusername`, `if_default`, `phone`) VALUES (4, 19, '湖南省娄底市娄星区', '樊莲果', 0, '18670488561');
+INSERT INTO `tb_adderss`(`id`, `adderssid`, `adderss`, `adderssusername`, `if_default`, `phone`) VALUES (5, 19, '湖南省娄底市娄星区', '樊莲果', 0, '18670488561');
+INSERT INTO `tb_adderss`(`id`, `adderssid`, `adderss`, `adderssusername`, `if_default`, `phone`) VALUES (6, 19, '湖南省娄底市娄星区', '樊莲果', 0, '18670488561');
+INSERT INTO `tb_adderss`(`id`, `adderssid`, `adderss`, `adderssusername`, `if_default`, `phone`) VALUES (7, 19, '湖南省娄底市娄星区', '樊莲果', 0, '18670488561');
+INSERT INTO `tb_adderss`(`id`, `adderssid`, `adderss`, `adderssusername`, `if_default`, `phone`) VALUES (8, 19, '湖南省娄底市娄星区', '樊莲果', 0, '18670488561');
+INSERT INTO `tb_adderss`(`id`, `adderssid`, `adderss`, `adderssusername`, `if_default`, `phone`) VALUES (9, 19, '湖南省娄底市娄星区', '樊莲果', 0, '18670488561');
+INSERT INTO `tb_adderss`(`id`, `adderssid`, `adderss`, `adderssusername`, `if_default`, `phone`) VALUES (10, 19, '湖南省娄底市娄星区', '樊莲果', 0, '18670488561');

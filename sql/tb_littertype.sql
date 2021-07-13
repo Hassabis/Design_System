@@ -1,0 +1,12 @@
+INSERT INTO `tb_littertype`(`id`, `little`, `sign`, `detailsign`) VALUES (1, '718车型', 1, 1);
+INSERT INTO `tb_littertype`(`id`, `little`, `sign`, `detailsign`) VALUES (2, '718Spyder', 1, 1);
+INSERT INTO `tb_littertype`(`id`, `little`, `sign`, `detailsign`) VALUES (3, '911 Carrera & Targa车型', 2, 2);
+INSERT INTO `tb_littertype`(`id`, `little`, `sign`, `detailsign`) VALUES (4, '911 Turbo S车型', 2, 3);
+INSERT INTO `tb_littertype`(`id`, `little`, `sign`, `detailsign`) VALUES (5, 'Taycan车型', 3, 4);
+INSERT INTO `tb_littertype`(`id`, `little`, `sign`, `detailsign`) VALUES (6, 'Panamera车型', 4, 5);
+INSERT INTO `tb_littertype`(`id`, `little`, `sign`, `detailsign`) VALUES (7, 'Panamera车型', 4, 5);
+INSERT INTO `tb_littertype`(`id`, `little`, `sign`, `detailsign`) VALUES (8, 'Panamera GTS车型', 4, 5);
+INSERT INTO `tb_littertype`(`id`, `little`, `sign`, `detailsign`) VALUES (9, 'Panamera Turbo车型', 4, 5);
+INSERT INTO `tb_littertype`(`id`, `little`, `sign`, `detailsign`) VALUES (10, 'Panamera E-Hybrid车型', 4, 5);
+INSERT INTO `tb_littertype`(`id`, `little`, `sign`, `detailsign`) VALUES (11, 'Macan车型', 5, 6);
+INSERT INTO `tb_littertype`(`id`, `little`, `sign`, `detailsign`) VALUES (12, 'Cayenne车型', 6, 7);
