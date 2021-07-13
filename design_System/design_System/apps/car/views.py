@@ -58,7 +58,13 @@ class TechinalCarData(APIView):
             return Response({"error":"我们也很困惑为什么查不出来"})
         ser = CarDetailTechnicalDataSerializer(data)
         return Response(ser.data)
-
+    def post(self,request):
+        try:
+            data = CarDetailTechnicalData.objects.all()
+        except:
+            return Response({"error":"我们也很困惑为什么查不出来"})
+        ser = CarDetailTechnicalDataSerializer(data,many=True)
+        return Response(ser.data)
 
 class TeCarBaseData(APIView):
     def get(self,request,pk):

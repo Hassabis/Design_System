@@ -14,6 +14,7 @@ urlpatterns = [
     url('detailCar/(?P<pk>\d+)/',views.DetailCarModelView.as_view()),
     # 车辆详情数据
     url('techincalCar/(?P<pk>\d+)/',views.TechinalCarData.as_view()),
+    url('techincalCar/',views.TechinalCarData.as_view()),
     # 页面基本数据
     url('pagemessage/(?P<pk>\d+)/',views.TeCarBaseData.as_view())
 ]

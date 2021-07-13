@@ -82,6 +82,7 @@ class CarDetailTechnicalData(models.Model):
     mostcontentarea = models.IntegerField(null=True,verbose_name="最大行李厢容积")
     oilbox = models.IntegerField(null=True,verbose_name="燃油箱")
     price = models.CharField(null=True,verbose_name="价格",max_length=144)
+    carimage = models.CharField(null=True,default=None,max_length=255,verbose_name="汽车图片")
 
     class Meta:
         db_table = "tb_alldata"
