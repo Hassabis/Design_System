@@ -24,5 +24,7 @@ urlpatterns = [
     # 资源图片管理
     url(r'^',include(('imageview.urls','imageview'),namespace="imageview")),
     # 汽车管理
-    url(r'^',include(('car.urls','car'),namespace="car"))
+    url(r'^',include(('car.urls','car'),namespace="car")),
+    # 支付
+    url(r'^',include(('payment.urls','payment'),namespace="payment"))
 ]
