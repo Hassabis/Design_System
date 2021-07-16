@@ -98,12 +98,11 @@ class PaymentStatusView(APIView):
         )
         import time
         order_string = alipay.api_alipay_trade_page_pay(
-
-            out_trade_no=str(time.time() * 1000),
+            out_trade_no=str(int(time.time() * 1000)),
             total_amount=str(Total),  # 将Decimal类型转换为字符串交给支付宝
             subject=carname,
             return_url="http://127.0.0.1:8080/index/",
-            notify_url="http://127.0.0.1:8080/index/"  # 可选, 不填则使用默认notify url
+            notify_url=None  # 可选, 不填则使用默认notify url
         )
         # print(order_string)
         loctime = time.strftime("%Y-%m-%d %H:%M:%S",time.localtime())

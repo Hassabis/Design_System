@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'imageview',
     'car',
     'rest_framework',
-    'payment'
+    'payment',
+    'area'
 ]
 
 MIDDLEWARE = [

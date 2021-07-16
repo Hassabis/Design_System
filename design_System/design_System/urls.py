@@ -26,5 +26,7 @@ urlpatterns = [
     # 汽车管理
     url(r'^',include(('car.urls','car'),namespace="car")),
     # 支付
-    url(r'^',include(('payment.urls','payment'),namespace="payment"))
+    url(r'^',include(('payment.urls','payment'),namespace="payment")),
+    # 地址
+    url(r'^',include(('area.urls','area'),namespace="area"))
 ]
